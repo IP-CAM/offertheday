@@ -1,0 +1,24 @@
+#offertheday{display:none;}
+#offertheday,#offertheday img{width:100%;}
+#offertheday a {position:relative;display:block;height:100%;width:100%;border:1px solid transparent;}
+#offername {font-size:45px;font-weight:bold; position:absolute; top:20%;left:0;right:0;text-align:center;line-height: 1;}
+#offertimer {font-size:80px;font-weight:bold; position:absolute; bottom:30%;left:0;right:0;text-align:center;color:#fff;}
+.prices {font-size:35px;font-weight:bold; position:absolute; bottom:25px;left:25px;color:#fff;}
+#old-price{text-decoration: line-through;color:#f00; font-size:30px;}
+.prices span{display:block;padding:10px;}
+@media(max-width:1000px){  #offername {font-size:35px;top:15%;} }
+@media(max-width:700px){
+#offertimer {font-size:50px; bottom:25%;}
+.prices {font-size:25px;left:15px;}
+.prices span{padding:5px;}
+#old-price{font-size:20px;}
+#offername {font-size:30px;}
+}
+@media(max-width:590px){ #offername {top:10px;} }
+@media(max-width:495px){
+#offername {font-size:20px;top:5px;}
+#offertimer {font-size:30px; bottom:10px;}
+.prices {bottom:5px;font-size:20px;}
+.prices span{padding:0;}
+#old-price{font-size:15px;}
+}
