@@ -6,6 +6,7 @@
 		<div class="prices">
 			<span id="new-price"></span>
 			<span id="old-price"></span>
+			
 		</div>
 	</a>
 </div>
@@ -14,7 +15,8 @@
 function pretty_time_string(num) {
 	return ( num < 10 ? "0" : "" ) + num;
 }
-   
+   	var timezone = '<?php echo date("Z"); ?>';
+		
 function getter(){
 	$.ajax({
 		url: 'index.php?route=extension/module/offertheday',
@@ -28,9 +30,9 @@ function getter(){
 				$('#offertheday a').attr('href', item['href'].replace("&amp;", '&'));
 				$('#offertheday').show(300);
 				var start = new Date( item['date_end']);
-				
+			
 				setInterval(function() {
-					var total_seconds = (start - new Date) / 1000;   
+					var total_seconds = ((start - new Date) / 1000) - timezone;   
 				
 					var days = Math.floor(total_seconds / 86400);
 					total_seconds = total_seconds % 86400;
